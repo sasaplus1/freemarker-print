@@ -31,11 +31,14 @@ export function printTokens(
 
         for (const token of tokens) {
           process.stdout.write(
-            JSON.stringify({
-              type: token.type,
-              text: token.text,
-              params: token.params
-            })
+            JSON.stringify(
+              {
+                type: token.type,
+                text: token.text,
+                params: token.params
+              },
+              (key, value) => (value === undefined ? '' : value)
+            )
           );
         }
 
@@ -49,7 +52,7 @@ export function printTokens(
             'type:%s\ttext:%s\tparams:%s',
             token.type,
             token.text,
-            token.params
+            token.params || ''
           );
         }
       }
