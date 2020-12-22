@@ -7,6 +7,7 @@
     "freemarker-parser": "^1.1.6"
   },
   "devDependencies": {
+    "@types/node": "^14.14.14",
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "@typescript-eslint/parser": "^4.11.0",
     "eslint": "^7.16.0",

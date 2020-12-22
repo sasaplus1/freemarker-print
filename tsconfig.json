@@ -3,6 +3,7 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "lib": [
+      "dom",
       "ESNext"
     ],
     "module": "CommonJS",
