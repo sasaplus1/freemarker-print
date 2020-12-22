@@ -17,6 +17,9 @@
     "prettier": "^2.2.1",
     "typescript": "^4.1.3"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "license": "MIT",
   "private": true,
   "readmeFilename": "README.md",
