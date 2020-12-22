@@ -23,6 +23,6 @@
   },
   "scripts": {
     "fixpack": "npx fixpack",
-    "postinstall": "chmod -R +x .hooks && git config --local core.hooksPath .hooks"
+    "postinstall": "[ -z \"$CI\" ] && git config core.hooksPath .hooks || :"
   }
 }
