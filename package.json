@@ -9,5 +9,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/sasaplus1/freemarker-print.git"
+  },
+  "scripts": {
+    "fixpack": "npx fixpack"
   }
 }
