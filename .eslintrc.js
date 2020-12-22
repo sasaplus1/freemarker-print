@@ -26,7 +26,6 @@ module.exports = {
   root: true,
   settings: {
     node: {
-      allowModules: ['freemarker-parser'],
       tryExtensions: ['.d.ts', '.ts', '.js', '.json', '.node']
     }
   }
