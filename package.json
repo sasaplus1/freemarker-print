@@ -22,7 +22,16 @@
     "url": "https://github.com/sasaplus1/freemarker-print.git"
   },
   "scripts": {
+    "build": "tsc",
+    "fix": "run-s fix:eslint fix:prettier",
+    "fix:eslint": "eslint --ext .js,.ts --fix .",
+    "fix:prettier": "prettier --write --parser typescript './**/*.{js,ts}'",
     "fixpack": "npx fixpack",
-    "postinstall": "[ -z \"$CI\" ] && git config core.hooksPath .hooks || :"
+    "lint": "run-s lint:eslint lint:prettier",
+    "lint:eslint": "eslint --cache --ext .js,.ts .",
+    "lint:prettier": "prettier --check --parser typescript './**/*.{js,ts}'",
+    "postinstall": "[ -z \"$CI\" ] && git config core.hooksPath .hooks || :",
+    "test": "mocha './**/*.test.ts'",
+    "watch": "tsc --watch"
   }
 }
