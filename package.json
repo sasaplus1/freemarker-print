@@ -3,6 +3,9 @@
   "description": "print FreeMarker template tokens",
   "version": "0.0.0",
   "author": "sasa+1 <sasaplus1@gmail.com>",
+  "dependencies": {
+    "freemarker-parser": "^1.1.6"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "@typescript-eslint/parser": "^4.11.0",

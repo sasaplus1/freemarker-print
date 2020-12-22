@@ -666,6 +666,11 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.1.0.tgz#a5d06b4a8b01e3a63771daa5cb7a1903e2e57067"
   integrity sha512-tW+UkmtNg/jv9CSofAKvgVcO7c2URjhTdW1ZTkcAritblu8tajiYy7YisnIflEwtKssCtOxpnBRoCB7iap0/TA==
 
+freemarker-parser@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/freemarker-parser/-/freemarker-parser-1.1.6.tgz#0972455bf2b92f3d9cdbf0c16eaee6d9885c19db"
+  integrity sha512-Jt98Izk62Uu+21e3yHAdl1dI4d3Zmx5JuVpuT/vxwJLJTwt77ZdU+Fz8p2zjImjT1O5FKU7+3yt3LzbOHOQFJQ==
+
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
