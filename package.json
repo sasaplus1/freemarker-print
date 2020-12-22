@@ -3,6 +3,9 @@
   "description": "print FreeMarker template tokens",
   "version": "0.0.0",
   "author": "sasa+1 <sasaplus1@gmail.com>",
+  "devDependencies": {
+    "lint-staged": "^10.5.3"
+  },
   "license": "MIT",
   "private": true,
   "readmeFilename": "README.md",
@@ -11,6 +14,7 @@
     "url": "https://github.com/sasaplus1/freemarker-print.git"
   },
   "scripts": {
-    "fixpack": "npx fixpack"
+    "fixpack": "npx fixpack",
+    "postinstall": "chmod -R +x .hooks && git config --local core.hooksPath .hooks"
   }
 }
