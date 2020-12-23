@@ -3,6 +3,10 @@
   "description": "print FreeMarker template tokens",
   "version": "0.0.0",
   "author": "sasa+1 <sasaplus1@gmail.com>",
+  "bin": {
+    "freemarker-print": "./bin/ftlp",
+    "ftlp": "./bin/ftlp"
+  },
   "dependencies": {
     "commander": "^6.2.1",
     "debug": "^4.3.1",
