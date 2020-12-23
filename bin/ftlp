@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+const { program } = require('commander');
+const debug = require('debug');
+const { Parser } = require('freemarker-parser');
+
+const meta = require('../package');
+
+const { tokenize, printTokens } = require('../');
+
+const log = debug('freemarker-print');
+
+program
+  .description('print FreeMarker template tokens')
+  .option('-f, --format <type>', 'output format (json,ltsv)', 'json')
+  .version(meta.version, '-v, --version');
+
+program.on('--help', function () {
+  console.log('');
+  console.log('Usage:');
+  console.log('  $ ftlp template.ftl           print tokens');
+  console.log('  $ ftlp template.ftl -f ltsv   print tokens by LTSV format');
+});
+
+program.parse(process.argv);
+
+const arg = program.args[0];
+const parser = new Parser();
+
+log('arg: %s', arg);
+log('program: %O', program);
+
+printTokens(tokenize(arg, { parser }), {
+  output: program.format
+});
