@@ -1,7 +1,7 @@
 {
   "name": "freemarker-print",
   "description": "print FreeMarker template tokens",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "sasa+1 <sasaplus1@gmail.com>",
   "bin": {
     "freemarker-print": "./bin/ftlp",
