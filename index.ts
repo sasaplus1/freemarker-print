@@ -1,7 +1,6 @@
 import * as fs from 'fs';
 
-import { Parser } from 'freemarker-parser';
-
+import type { Parser } from 'freemarker-parser';
 import type { IToken } from 'freemarker-parser/types/interface/Tokens';
 
 type TokenizeOptions = {
@@ -27,22 +26,16 @@ export function printTokens(
   switch (output) {
     case 'json':
       {
-        process.stdout.write('{"tokens":[');
+        const json = JSON.stringify(
+          tokens.map((token) => ({
+            type: token.type,
+            text: token.text,
+            params: token.params
+          })),
+          (key, value) => (value === undefined ? '' : value)
+        );
 
-        for (const token of tokens) {
-          process.stdout.write(
-            JSON.stringify(
-              {
-                type: token.type,
-                text: token.text,
-                params: token.params
-              },
-              (key, value) => (value === undefined ? '' : value)
-            )
-          );
-        }
-
-        process.stdout.write(']}');
+        process.stdout.write(`{"tokens":${json}}`);
       }
       break;
     case 'ltsv':
@@ -51,7 +44,7 @@ export function printTokens(
           console.log(
             'type:%s\ttext:%s\tparams:%s',
             token.type,
-            token.text,
+            JSON.stringify(token.text).slice(1, -1),
             token.params || ''
           );
         }
