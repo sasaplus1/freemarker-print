@@ -36,6 +36,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "check-types": "tsc --noEmit",
     "fix": "run-s fix:eslint fix:prettier",
     "fix:eslint": "eslint --ext .js,.ts --fix .",
     "fix:prettier": "prettier --write --parser typescript './**/*.{js,ts}'",
