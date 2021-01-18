@@ -31,5 +31,5 @@ log('arg: %s', arg);
 log('program: %O', program);
 
 printTokens(tokenize(arg, { parser }), {
-  output: program.format
+  output: program.opts().format
 });
