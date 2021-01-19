@@ -4,7 +4,7 @@
 
 print FreeMarker template tokens
 
-## How to use
+## Install
 
 Install command to global:
 
@@ -17,6 +17,14 @@ or execute directly with npx:
 
 ```console
 $ npx github:sasaplus1/freemarker-print --help
+```
+
+## How to use
+
+Filter with `jq`:
+
+```console
+$ freemarker-print -f json index.ftl | jq '.tokens[] | select(.type != "Text")'
 ```
 
 ## License
